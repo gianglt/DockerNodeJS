@@ -36,3 +36,10 @@ FontAwesomeIcon {
 .faIconRed {
   color:red;
 }
+
+
+.imgWide {
+  width: 100%;
+  text-align:center;
+  align-self: center;
+}
