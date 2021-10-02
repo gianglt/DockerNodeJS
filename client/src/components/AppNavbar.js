@@ -3,8 +3,7 @@ import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem, Container } from '
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-import { faCoffee, faBaby, faArchway, faBlenderPhone} from '@fortawesome/free-solid-svg-icons';
-
+import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 import { Home } from '@mui/icons-material';
 
@@ -53,13 +52,11 @@ export default class AppNavbar extends Component {
                                 </Nav>
                                 <Nav className="justify-content-end" variant="dark">
                                     <Navbar.Brand >
-                                        <FontAwesomeIcon icon={faCoffee} className="faIcon"/> Coffee
+                                        <FontAwesomeIcon icon={faEnvelope} className="faIcon"/> support@dieuhanhvp.net
                                     </Navbar.Brand>
+
                                     <Navbar.Brand >
-                                        <FontAwesomeIcon icon={faBaby} className="faIcon"/> Baby
-                                    </Navbar.Brand>
-                                    <Navbar.Brand >
-                                        <FontAwesomeIcon icon={faArchway} className="faIcon"/> faArchway
+                                        <FontAwesomeIcon icon={faPhone} className="faIconRed"/> 0983.494.080
                                     </Navbar.Brand>
                                     <NavDropdown title={this.state.UserName} id="user-nav-dropdown" className="user-nav-dropdown">
                                         <NavDropdown.Item href="/users/changepassword">Đổi mật khẩu</NavDropdown.Item>
