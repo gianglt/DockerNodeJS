@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import { Button, Container, Card, Row } from 'react-bootstrap'
-
+// import Manatee from './components/Manatee/Manatee';
+// import Whale from './components/Whale/Whale';
+// import Narwhal from './components/Narwhal/Narwhal';
+import DemoComponent from './pages/demo/demoComponents';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,16 +32,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/get")
+    axios.get("/api/books/get")
         .then((response) => {
             this.setState({
                 fetchData: response.data
+                
             })
         })
   }
   
   submit = () => {
-    axios.post('/api/insert', this.state)
+    axios.post('/api/books/insert', this.state)
         .then(() => { alert('success post') })
     console.log(this.state)
     document.location.reload();
@@ -46,13 +50,13 @@ class App extends Component {
   
   delete = (id) => {
     if (window.confirm("Do you want to delete? ")) {
-        axios.delete(`/api/delete/${id}`)
+        axios.delete(`/api/books/delete/${id}`)
         document.location.reload()
     }
   }
   
   edit = (id) => {
-    axios.put(`/api/update/${id}`, this.state)
+    axios.put(`/api/books/update/${id}`, this.state)
     document.location.reload();
   }
 
@@ -74,6 +78,8 @@ class App extends Component {
             </React.Fragment>
         )
     })
+
+
     return (
       <div className='App'>
           <h1>Nhận xét sách</h1>
@@ -87,6 +93,13 @@ class App extends Component {
                   {card}
               </Row>
           </Container>
+
+
+          <div>
+            <DemoComponent/>
+          </div>
+
+
       </div>
   );
 }
