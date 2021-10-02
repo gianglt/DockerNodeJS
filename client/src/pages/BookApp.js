@@ -58,7 +58,7 @@ class BookApp extends Component {
   }
 
   render() {
-    let card = this.state.fetchData.map((val, key) => {
+    let card = this.state.fetchData.map((val, key=val.id) => {
         return (
             <React.Fragment>
                 <Card style={{ width: '18rem' }} className='m-2'>

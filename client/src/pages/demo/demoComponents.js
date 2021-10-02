@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../../css/App.css';
 
-import Manatee from '../../components/Manatee/Manatee';
-import Whale from '../../components/Whale/Whale';
-import Narwhal from '../../components/Narwhal/Narwhal';
+import Manatee from '../../components/Examples/Manatee/Manatee';
+import Whale from '../../components/Examples/Whale/Whale';
+import Narwhal from '../../components/Examples/Narwhal/Narwhal';
 
 
 class DemoComponent extends Component {

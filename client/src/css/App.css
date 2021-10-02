@@ -13,3 +13,23 @@
 .wrapper {
   padding: 20px;
 }
+
+#user-nav-dropdown{
+  color: white;
+  font-weight: bold;
+  
+}
+
+/* div.dropdown-menu .dropdown-item {
+  color: white;
+  background-color:rgb(13,110,253);
+} */
+
+FontAwesomeIcon {
+  color: white;
+  align-self:center;
+}
+
+.faIcon {
+  color:yellowgreen;
+}
